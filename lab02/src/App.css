@@ -11,9 +11,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +24,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -119,33 +122,34 @@ h3 {
   }
 
   .filter-type {
-    padding:  20px;
+    padding: 20px;
     border: solid #ddd 1px;
+
     .form-type {
       display: flex;
       width: 100%;
     }
   }
-  
+
   .filter-time {
-    padding:  20px;
+    padding: 20px;
     border: solid #ddd 1px;
   }
 
   .filter-rating {
-    padding:  20px;
+    padding: 20px;
     border: solid #ddd 1px;
 
     .list-rate {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; 
+      align-items: center;
     }
   }
 
   .button-wrapper {
-    padding:  30px;
+    padding: 30px;
     border: solid #ddd 1px;
 
     .btn-apply {
@@ -189,6 +193,51 @@ h3 {
         background-color: plum;
       }
     }
+  }
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  background-color: black;
+  color: white;
+  padding: 40px;
+
+  .about-us {
+    text-align: left;
+
+    .form-footer {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+
+      .email {
+        padding: 8px 10px;
+        margin-right: 6px;
+        width: 50%;
+        border-radius: 8px;
+      }
+
+      .btn-send {
+        padding: 3px 36px;
+        background-color: palevioletred;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: bold;
+    }
+  }
+
+  h4 {
+    margin-bottom: 0px;
+  }
+
+  ul {
+    margin-top: 5px;
   }
 }
 
