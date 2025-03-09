@@ -1,15 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import logo from '../assets/images/chefify.png'
 import check from '../assets/images/check.png'
 import user from '../assets/images/avatar.png'
 
-export default function () {
+export default function ({categories}) {
+    const [textSearch, setTextSearch] = useState('');
+
+    const handleChange = (e) => {
+        setTextSearch(e.target.value);
+        console.log(textSearch);
+    }
+
+
+
     return (
         <div className="header">
             <div className="col-4 header-left">
-                <img src={logo} style={{width: '100px', height: '36px'}} alt="logo" className="logo" />
+                <img src={logo} style={{ width: '100px', height: '36px' }} alt="logo" className="logo" />
                 <form action="" className="searchInput">
-                    <input type="text" name="search" id="search" className="search" placeholder='DuongHoangHuy' />
+                    <input type="text" name="search" id="search" className="search" placeholder='DuongHoangHuy' onChange={handleChange}/>
                 </form>
             </div>
             <div className="col-6 header-center">
@@ -26,7 +35,7 @@ export default function () {
                     <img src={check} alt="" className="recipe-box" />
                     Your Recipe Box
                 </div>
-                <img src={user} alt="" className="user" />
+                <img src={user} style={{ width: '36', height: '36px' }} alt="" className="user" />
             </div>
         </div>
     )
